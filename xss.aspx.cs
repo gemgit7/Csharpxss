@@ -8,9 +8,18 @@ namespace CxAudit_Demo
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            try { message.Text = Request.QueryString[0]; }
+            try { 
+				string qs = Request.QueryString[0]; 
+				string sanitized = myCustomSanitizer(qs);
+				message.Text = sanitized;
+			}
             catch { }
         }//end Page_Load
+		
+		protected string myCustomSanitizer(string sVar) {
+			// Some custom logic that sanitizes for Reflected XSS
+			return Regex.Replace(sVar, @"(\s+|@|&|'|\(|\)|<|>|#)", "");
+		}
 
         protected void submit_Click(object sender, EventArgs e)
         {
