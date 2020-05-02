@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 
-namespace CxCE_Demo
+namespace CxAudit_Demo
 {
     public partial class commandi : System.Web.UI.Page
     {

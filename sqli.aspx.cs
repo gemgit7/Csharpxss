@@ -2,7 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 
-namespace CxCE_Demo
+namespace CxAudit_Demo
 {
     public partial class sqli : System.Web.UI.Page
     {

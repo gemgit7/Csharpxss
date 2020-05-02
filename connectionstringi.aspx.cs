@@ -7,7 +7,7 @@ using System.Web.UI.WebControls;
 using System.Data;
 using System.Data.SqlClient;
 
-namespace CxCE_Demo
+namespace CxAudit_Demo
 {
     public partial class connectionstringi : System.Web.UI.Page
     {

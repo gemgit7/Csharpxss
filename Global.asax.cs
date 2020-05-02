@@ -5,7 +5,7 @@ using System.Web;
 using System.Web.Security;
 using System.Web.SessionState;
 
-namespace CxCE_Demo
+namespace CxAudit_Demo
 {
     public class Global : System.Web.HttpApplication
     {

@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace CxCE_Demo {
+namespace CxAudit_Demo {
     
     
     public partial class commandi {
