@@ -38,7 +38,7 @@ namespace CxAudit_Demo
                 age = getAge(username);
             }
 
-            message.Text = "Welcome " + username;
+            message.Text = myCustomSanitizer("Welcome " + username);
             conn.Close();
         }
 
