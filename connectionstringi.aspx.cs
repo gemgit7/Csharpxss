@@ -35,7 +35,7 @@ namespace CxAudit_Demo
                 username = reader["NAME"].ToString();
             }
 
-            message.Text = myCustomSanizier("Welcome " + username);
+            message.Text = myCustomSanitizer("Welcome " + username);
             conn.Close();
         }
     }
