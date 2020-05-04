@@ -26,16 +26,6 @@ namespace CxAudit_Demo
 			return Regex.Replace(sVar, @"(<|>)", "");
 		}
 
-        protected void submit_Click(object sender, EventArgs e)
-        {
-            if(isSafe(name.Text))
-                message.Text = name.Text;
-            else
-                message.Text = "You did not type 'safe'.";
-            
-            message2.Text = makeSafe(name.Text);
-        }
-
         private void getName()
         {
             SqlConnection conn = new SqlConnection("Server=myServerAddress;Database=myDataBase;User Id=myUsername;Password=" + Constants.DB_PASSWORD + ";");
@@ -53,23 +43,6 @@ namespace CxAudit_Demo
                 message.Text = reader["NAME"].ToString();
 
             conn.Close();
-        }
-
-        private string makeSafe(string text)
-        {
-            //returns "Safe" in all cases
-            if (text.ToUpper().Equals("SAFE"))
-                return text;
-
-            return "Safe";
-        }
-
-        private bool isSafe(string text)
-        {
-            if (text.ToUpper().Equals("SAFE"))
-                return true;
-
-            return false;            
         }
     }
 }
