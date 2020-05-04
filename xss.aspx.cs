@@ -17,13 +17,13 @@ namespace CxAudit_Demo
         }//end Page_Load
 		
 		protected string myCustomSanitizer(string sVar) {
-            
-            // ------------------------------------------------------------
+
+			// ------------------------------------------------------------
 			// Some custom logic that sanitizes for Reflected XSS
-            // Not a real implementation. For demonstration purposes only.
-            // ------------------------------------------------------------
-		
-        return Regex.Replace(sVar, @"(<|>)", "");
+			// Not a real implementation. For demonstration purposes only.
+			// ------------------------------------------------------------
+
+			return Regex.Replace(sVar, @"(<|>)", "");
 		}
 
         protected void submit_Click(object sender, EventArgs e)
